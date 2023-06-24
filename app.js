@@ -21,9 +21,7 @@ app.set("view engine", "ejs");
 
 
 
-app.get("", (req, res)=>{
-    res.send("Hello World")
-})
+app.use("/", require("./server/routes/main"))
 
 
 app.listen(PORT, ()=>{
